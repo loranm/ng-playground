@@ -1,7 +1,13 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
+import { CoreComponent } from '@core/core.component';
+import { ROUTES } from './routes';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { importProvidersFrom } from '@angular/core';
 
-import { AppModule } from './app/app.module';
+const PROVIDERS = [
+  provideRouter(ROUTES),
+  importProvidersFrom(BrowserAnimationsModule),
+];
 
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+bootstrapApplication(CoreComponent, { providers: PROVIDERS });
