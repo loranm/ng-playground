@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { cloudy, sunny, WeatherData } from '@models/weather';
+import { sunny, WeatherData } from '@models/weather';
 
 @Injectable()
 export class WidgetState {
