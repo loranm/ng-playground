@@ -1,0 +1,52 @@
+:host {
+  --gap: 1rem;
+  --padding: 1.5rem;
+
+  padding-inline: calc(var(--padding) * 2);
+  padding-block: var(--padding);
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--gap);
+
+  border: var(--border-clr) 1px solid;
+  border-radius: 15px;
+  box-shadow: var(--box-shadow);
+
+  .widget-actions {
+    background-color: #fafafa;
+    border-top: var(--border-clr) 1px solid;
+    margin: 0 -10px -10px -10px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+    padding: 15px;
+    display: flex;
+    gap: 1rem;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+
+  .widget-header {
+    border-bottom: var(--border-clr) 1px solid;
+    margin: 0 -10px 0 -10px;
+    padding: 0 15px 15px 15px;
+  }
+  .widget-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .widget-sub-title {
+    font-size: 13px;
+  }
+  .widget-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--gap);
+    place-items: center;
+  }
+
+  .sky-condition {
+    font-size: 48px;
+    line-height: 1.5;
+  }
+}
