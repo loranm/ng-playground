@@ -23,7 +23,8 @@
     "paths": {
       "@core/*": ["src/app/core/*"],
       "@commons/*": ["src/app/commons/*"],
-      "@models/*": ["src/app/models/*"]
+      "@models/*": ["src/app/models/*"],
+      "@webservices/*": ["src/app/webservices/*"]
     }
   },
   "angularCompilerOptions": {

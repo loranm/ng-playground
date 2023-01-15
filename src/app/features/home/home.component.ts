@@ -10,13 +10,14 @@ import { RouterModule } from '@angular/router';
   imports: [RouterModule, MatListModule],
   template: ` <mat-nav-list>
     <mat-list-item>
-      <a [routerLink]="[outletLink]" routerLinkActive="router-link-active">Ng Template Outlet</a>
+      <a [routerLink]="['/', routes.TEMPLATE_OUTLET]" routerLinkActive="router-link-active">Ng Template Outlet</a>
+    </mat-list-item>
+    <mat-list-item>
+      <a [routerLink]="['/', routes.ONBOARDING]" routerLinkActive="router-link-active">Onboarding</a>
     </mat-list-item>
   </mat-nav-list>`,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
-  get outletLink(): `/${RoutesEnum.TEMPLATE_OUTLET}` {
-    return `/outlet`;
-  }
+  readonly routes = RoutesEnum;
 }
