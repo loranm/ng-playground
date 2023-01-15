@@ -6,12 +6,7 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
   standalone: true,
   imports: [CommonModule],
 
-  template: `
-    <ng-content></ng-content>
-    <footer>
-      <ng-content select="footer"></ng-content>
-    </footer>
-  `,
+  template: ` <ng-content></ng-content> `,
   styles: [
     `
       :host {
