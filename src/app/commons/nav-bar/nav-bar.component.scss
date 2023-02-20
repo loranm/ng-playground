@@ -1,0 +1,47 @@
+:host {
+  .navigation {
+    --clr: rgb(22, 15, 201);
+    --hover-clr : rgb(1, 1, 19);
+    --selected-color:  rgb(12, 8, 124);
+    --link-clr: white;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
+    grid-auto-flow: column;
+    grid-template-rows: 3rem;
+    gap: 1rem;
+
+    background-color: var(--clr);
+
+    &__item {
+      display:flex;
+      a {
+        transition: background-color 300ms ease-in;
+        color: var(--link-clr);
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+
+
+        &[aria-current="page"] {
+
+          background-color: var(--selected-color);
+          // outline: 2px solid orange;
+        }
+
+        &:hover {
+          background-color: var(--hover-clr) !important;
+          cursor: pointer;
+        }
+      }
+
+
+    }
+
+
+
+  }
+
+}

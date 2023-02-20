@@ -6,6 +6,31 @@ export const ROUTES: Routes = [
     path: RoutesEnum.HOME,
     loadComponent: async () =>
       (await import('src/app/features/home/home.component')).HomeComponent,
+      loadChildren: () =>
+       [
+
+          {
+            path: RoutesEnum.page2,
+            title: "page 2",
+            loadComponent: async () =>(await  import('src/app/features/mocked-route/mocked-route.component')).MockedRouteComponent
+          },
+          {
+            path: RoutesEnum.page3,
+            title: "page 3",
+            loadComponent: async () =>(await  import('src/app/features/mocked-route/mocked-route.component')).MockedRouteComponent
+          },
+
+          {
+            path: RoutesEnum.page1,
+            title: "page 1",
+            loadComponent: async () =>(await  import('src/app/features/mocked-route/mocked-route.component')).MockedRouteComponent
+          },
+
+
+        ]
+
+
+
   },
   {
     path: RoutesEnum.TEMPLATE_OUTLET,
