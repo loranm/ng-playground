@@ -11,13 +11,13 @@ import { RoutesEnum } from '../../../routes.enum';
   <nav aria-label="main">
     <ul class="navigation">
       <li  class="navigation__item">
-        <a [routerLink]="[RoutesEnum.page1]"
-        routerLinkActive="active-page" ariaCurrentWhenActive="page">page 1</a>
+        <a [routerLink]="[RoutesEnum.TEMPLATE_OUTLET]"
+        routerLinkActive="active-page" ariaCurrentWhenActive="page">Template Outlet</a>
       </li>
       <li  class="navigation__item">
-        <a [routerLink]="[RoutesEnum.page2]"
+        <a [routerLink]="[RoutesEnum.PETSTORE]"
         routerLinkActive="active-page"
-        ariaCurrentWhenActive="page">page 2</a>
+        ariaCurrentWhenActive="page">Petstore</a>
       </li>
       <li  class="navigation__item">
         <a [routerLink]="[RoutesEnum.page3]"

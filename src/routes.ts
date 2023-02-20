@@ -6,8 +6,11 @@ export const ROUTES: Routes = [
     path: RoutesEnum.HOME,
     loadComponent: async () =>
       (await import('src/app/features/home/home.component')).HomeComponent,
-      loadChildren: () =>
-       [
+      loadChildren: () => [
+        {
+          path: RoutesEnum.PETSTORE,
+          loadChildren: async () =>  (await import('src/app/features/petstore/petstore.route')).PetStoreRoutes,
+        },
 
           {
             path: RoutesEnum.page2,
@@ -25,19 +28,14 @@ export const ROUTES: Routes = [
             title: "page 1",
             loadComponent: async () =>(await  import('src/app/features/mocked-route/mocked-route.component')).MockedRouteComponent
           },
-
-
+          {
+            path: RoutesEnum.TEMPLATE_OUTLET,
+            title: 'ng template outlet demo',
+            loadComponent: async () =>
+              (await import('src/app/features/outlet/outlet.component'))
+                .OutletComponent,
+          },
         ]
-
-
-
-  },
-  {
-    path: RoutesEnum.TEMPLATE_OUTLET,
-    title: 'ng template outlet demo',
-    loadComponent: async () =>
-      (await import('src/app/features/outlet/outlet.component'))
-        .OutletComponent,
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {

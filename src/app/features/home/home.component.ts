@@ -6,23 +6,12 @@ import { RouterModule } from '@angular/router';
 import { NavBarComponent } from '@commons/nav-bar/nav-bar.component';
 
 @Component({
-  selector: 'app-home',
   standalone: true,
-  imports: [RouterModule, MatListModule, NavBarComponent],
+  imports: [RouterModule, NavBarComponent],
   template: `
- <app-nav-bar></app-nav-bar>
-
- <router-outlet></router-outlet>
-
-  <mat-nav-list>
-    <mat-list-item>
-      <a [routerLink]="[outletLink]" routerLinkActive="router-link-active">Ng Template Outlet</a>
-    </mat-list-item>
-  </mat-nav-list>`,
+     <app-nav-bar></app-nav-bar>
+     <router-outlet></router-outlet>
+  `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent {
-  get outletLink(): `/${RoutesEnum.TEMPLATE_OUTLET}` {
-    return `/outlet`;
-  }
-}
+export class HomeComponent {}
