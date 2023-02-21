@@ -7,13 +7,12 @@ import { map } from 'rxjs';
   standalone: true,
   imports: [CommonModule],
   template: `
-  <ng-container *ngIf="vm$ | async as vm">
-    <p>{{vm.title }}</p>
-  </ng-container>
+    <ng-container *ngIf="vm$ | async as vm">
+      <p>{{ vm.title }}</p>
+    </ng-container>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MockedRouteComponent  {
-  vm$ = inject(ActivatedRoute).title.pipe(map(title => ({title})))
-
+export class MockedRouteComponent {
+  vm$ = inject(ActivatedRoute).title.pipe(map((title) => ({ title })));
 }

@@ -1,7 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import {
-    WeatherCustomActionComponent
-} from '@commons/weather-custom-action/weather-custom-action.component';
+import { WeatherCustomActionComponent } from '@commons/weather-custom-action/weather-custom-action.component';
 import { WeatherWidgetComponent } from '@commons/weather-widget/weather-widget.component';
 
 @Component({

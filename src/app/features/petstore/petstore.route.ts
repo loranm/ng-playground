@@ -4,11 +4,9 @@ import { PetstoreService } from '../../webservices/petstore.service';
 export const PetStoreRoutes: Routes = [
   {
     path: '',
-    loadComponent: async () =>  (await import('src/app/features/petstore/petstore.component')).PetstoreComponent,
+    loadComponent: async () => (await import('src/app/features/petstore/petstore.component')).PetstoreComponent,
     resolve: {
-      petstore: () =>  inject(PetstoreService).petsAvailable$
-    }
-  }
-
-]
-
+      petstore: () => inject(PetstoreService).petsAvailable$,
+    },
+  },
+];

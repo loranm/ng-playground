@@ -9,8 +9,8 @@ import { NavBarComponent } from '@commons/nav-bar/nav-bar.component';
   standalone: true,
   imports: [RouterModule, NavBarComponent],
   template: `
-     <app-nav-bar></app-nav-bar>
-     <router-outlet></router-outlet>
+    <app-nav-bar></app-nav-bar>
+    <router-outlet></router-outlet>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

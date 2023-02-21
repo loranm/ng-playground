@@ -1,7 +1,5 @@
 import { CommonModule, NgTemplateOutlet } from '@angular/common';
-import {
-    ChangeDetectionStrategy, Component, inject, Injector, Input, TemplateRef
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Injector, Input, TemplateRef } from '@angular/core';
 import { WidgetActions } from '@commons/widgets/widget-actions.service';
 import { WidgetState } from '@commons/widgets/widget-state.service';
 import { cloudy, SkyCondition, sunny } from '@models/weather';

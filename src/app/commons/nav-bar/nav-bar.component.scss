@@ -1,8 +1,8 @@
 :host {
   .navigation {
     --clr: rgb(22, 15, 201);
-    --hover-clr : rgb(1, 1, 19);
-    --selected-color:  rgb(12, 8, 124);
+    --hover-clr: rgb(1, 1, 19);
+    --selected-color: rgb(12, 8, 124);
     --link-clr: white;
 
     display: grid;
@@ -14,7 +14,7 @@
     background-color: var(--clr);
 
     &__item {
-      display:flex;
+      display: flex;
       a {
         transition: background-color 300ms ease-in;
         color: var(--link-clr);
@@ -24,9 +24,7 @@
         justify-content: center;
         flex: 1;
 
-
-        &[aria-current="page"] {
-
+        &[aria-current='page'] {
           background-color: var(--selected-color);
           // outline: 2px solid orange;
         }
@@ -36,12 +34,6 @@
           cursor: pointer;
         }
       }
-
-
     }
-
-
-
   }
-
 }

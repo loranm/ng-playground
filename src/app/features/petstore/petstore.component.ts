@@ -2,16 +2,22 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { filter, map, Observable } from 'rxjs';
+import { PetCardComponent } from '@commons/pet-card/pet-card.component';
+import { CapitalizeDirective } from '../../commons/directives/pet-name.directive';
 
 @Component({
   selector: 'app-petstore',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, PetCardComponent, CapitalizeDirective],
   template: `
     <ng-container *ngIf="vm$ | async as vm">
-      <ul>
+      <ul class="pet-list">
         <li *ngFor="let pet of vm.petstore; trackBy: trackByPet">
-          {{ pet.name }}
+          <app-pet-card>
+            <span name capitalize>
+              {{ pet.name }}
+            </span>
+          </app-pet-card>
         </li>
       </ul>
       >
@@ -20,20 +26,13 @@ import { filter, map, Observable } from 'rxjs';
   styles: [
     `
       :host {
-        ul {
+        .pet-list {
           --row-height: 2rem;
+          outline: 1px solid;
           margin: 2rem;
           display: grid;
-          grid-template-columns: minmax(0,1fr);
-          gap: 1rem;
-          grid-auto-rows: var(--row-height);
-          li {
-            display:grid;
-            place-items: center;
-            background-color: lightgrey;
-            font-size:calc(var(--row-height) * 0.7);
-            font-weight: bold;
-          }
+          grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
+          gap: 1.5rem;
         }
       }
     `,

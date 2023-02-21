@@ -8,9 +8,8 @@ describe('MockedRouteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ MockedRouteComponent ]
-    })
-    .compileComponents();
+      imports: [MockedRouteComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MockedRouteComponent);
     component = fixture.componentInstance;

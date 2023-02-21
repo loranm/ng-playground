@@ -7,13 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [CommonModule, MatIconModule],
   template: `
     <h1 class="title">Page not found</h1>
-    <mat-icon
-      aria-hidden="false"
-      aria-label="Example home icon"
-      fontIcon="home"
-      inline="true"
-      class="icon"
-    ></mat-icon>
+    <mat-icon class="icon" aria-hidden="false" aria-label="Example home icon" fontIcon="home" inline="true"></mat-icon>
   `,
   styles: [
     `
