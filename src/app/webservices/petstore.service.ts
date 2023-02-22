@@ -1,16 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
+import { environment } from '../environments/environments';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PetstoreService {
   readonly #http = inject(HttpClient);
-  readonly petStoreApi = 'https://petstore.swagger.io/v2/pet' as const;
 
-  get availablePets() {
-    return `${this.petStoreApi}/findByStatus?status=available`;
+  get availablePetsPath() {
+    return `${environment.api.petStoreApi}/pet/findByStatus?status=available`;
   }
 
-  readonly petsAvailable$ = this.#http.get<unknown>(this.availablePets);
+  readonly petsAvailable$ = this.#http.get<unknown>(this.availablePetsPath);
 }
