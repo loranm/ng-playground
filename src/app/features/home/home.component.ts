@@ -13,5 +13,13 @@ import { NavBarComponent } from '@commons/nav-bar/nav-bar.component';
     <router-outlet></router-outlet>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  styles: [
+    `
+      :host {
+        display: grid;
+        gap: 1rem;
+      }
+    `,
+  ],
 })
 export class HomeComponent {}
