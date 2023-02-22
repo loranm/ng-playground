@@ -31,8 +31,6 @@ import { ToStringPipe } from '@commons/pipes/to-string.pipe';
     `
       :host {
         .pet-list {
-          --row-height: 2rem;
-          outline: 1px solid;
           margin: 2rem;
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
