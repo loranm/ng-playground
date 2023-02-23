@@ -24,7 +24,6 @@ import { ToStringPipe } from '@commons/pipes/to-string.pipe';
           </a>
         </li>
       </ul>
-      >
     </ng-container>
   `,
   styles: [
